@@ -1,9 +1,12 @@
-jet
-===
+### jet
 
 Swift-to-JVM bytecode compiler targeting the Java 8+ runtime.
 
-#### Differences between Swift and Jet
+The Swift language was created by Apple for use on both iPhone and MacOS X applications.  Swift, like Scala, sits at the intersection of Object Oriented and Functional programming.  It seems a shame for such a language to be locked to a specific platform.
+
+My interest is mainly in exploring Swift as a server-side development language, rather than UI-side.  Though will access to Java classes, certainly Swing, AWT, or SWT UI develooment is possible.
+
+#### Language Differences between Swift and Jet
 
 ##### Automatic Reference Counting
 Swift relies on *Automatic Reference Counting* (ARC) to manage the memory of an application.  However, because the JVM has built-in garbage collection, the Swift ARC model is not used for memory management.  Generally speaking, this has almost no visible effect for most applications, but there are differences that should be noted.
