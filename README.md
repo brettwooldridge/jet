@@ -8,6 +8,8 @@ My interest is mainly in exploring Swift as a server-side development language, 
 
 #### Language Differences between Swift and Jet
 
+The Swift langauge is specified in the iBook titled _The Swift Programming Language_, the abbreviation *SPL* will be used below to refer to specific pages or sections.
+
 ##### Automatic Reference Counting
 Swift relies on *Automatic Reference Counting* (ARC) to manage the memory of an application.  However, because the JVM has built-in garbage collection, the Swift ARC model will not be used for memory management.  Generally speaking, this will have almost no visible effect for most applications, but there are differences that should be noted.
 
@@ -20,3 +22,6 @@ However, currently there is no plan to support the *unowned* keyword as there is
 
 ##### Deinitialization
 In Swift, a class can define a *deinit* method that will be called when an object is released by ARC.  Under ARC, an object is *immediately* released when its reference count goes to zero, and therefore the *deinit* method is also called immediately.  The JVM garbage collection is not so deterministic.  While *deinit* is roughly equivalent to the *finalize* method in Java, the non-deterministic nature of garbage collection means that use of *finalize* is not recommended.  So, while Jet *will* map *deinit* to *finalize*, its use is similarly not recommended; especially as used by Swift for resource management.
+
+##### Optional Protocol Requirements
+The section of the *SPL* titled _Optional Protocol Requirements_ (p.289) notes that protocols that define *optional requirements* must be marked with the ``@objc`` attribute.  We find the use of this attribute strange, not only for Swift, but for a JVM-based implementation, and therefore introduce a synomym ``@optp`` meaning *optional protocol*.  The attribute ``@objc`` can still be used, but is not recommended.
