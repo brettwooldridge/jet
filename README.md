@@ -2,9 +2,9 @@
 
 Swift-to-JVM bytecode compiler targeting the Java 8+ runtime.
 
-The Swift language was created by Apple for use on both iPhone and MacOS X applications.  Swift, like Scala, sits at the intersection of Object Oriented and Functional programming.  It seems a shame for such a language to be locked to a specific platform.
+The Swift language was created by Apple for use on both iPhone and MacOS X applications.  Swift, like Scala, sits at the intersection of Object Oriented and Functional programming.  It seems a shame for such a language to be locked to a specific platform, and targeting the JVM and its portability and rich ecosystem has become popular of late.
 
-My interest is mainly in exploring Swift as a server-side development language, rather than UI-side.  Though will access to Java classes, certainly Swing, AWT, or SWT UI develooment is possible.
+My interest is mainly in exploring Swift as a server-side development language, rather than UI-side.  Though with access to Java classes, certainly Swing, AWT, or SWT UI develooment is possible.
 
 #### Language Differences between Swift and Jet
 
