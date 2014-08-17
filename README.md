@@ -9,7 +9,7 @@ My interest is mainly in exploring Swift as a server-side development language, 
 #### Language Differences between Swift and Jet
 
 ##### Automatic Reference Counting
-Swift relies on *Automatic Reference Counting* (ARC) to manage the memory of an application.  However, because the JVM has built-in garbage collection, the Swift ARC model will not used for memory management.  Generally speaking, this will have almost no visible effect for most applications, but there are differences that should be noted.
+Swift relies on *Automatic Reference Counting* (ARC) to manage the memory of an application.  However, because the JVM has built-in garbage collection, the Swift ARC model will not be used for memory management.  Generally speaking, this will have almost no visible effect for most applications, but there are differences that should be noted.
 
 ###### Strong Reference Cycles
 Because ARC is a much simpler form of memory management than garbage collection, it is not able to detect reference cycles.  Two objects with *strong references* to each other can prevent those objects from being released.  As a result, Swift introduces two concepts: *weak* and *unowned* references.
